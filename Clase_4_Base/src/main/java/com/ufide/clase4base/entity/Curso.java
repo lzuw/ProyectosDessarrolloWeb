@@ -7,18 +7,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-/**
- * Modelo de datos del Curso.
- *
- * CLASE 4: convertir esta clase en una Entity de JPA agregando:
- * - @Entity
- * - @Table(name = "cursos")
- * - @Id + @GeneratedValue(strategy = GenerationType.IDENTITY) sobre el id
- * - @Column(nullable = false) sobre el nombre
- *
- * Por ahora es solo un POJO que vive en memoria.
- */
-
 @Entity
 @Table(name = "cursos")
 public class Curso {
@@ -34,7 +22,6 @@ public class Curso {
     private int creditos;
     private String profesor;
 
-    /** Constructor vacio - obligatorio cuando esta clase pase a ser @Entity. */
     public Curso() {
     }
 

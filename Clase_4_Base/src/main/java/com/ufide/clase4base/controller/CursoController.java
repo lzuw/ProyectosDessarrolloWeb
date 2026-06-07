@@ -13,24 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.ufide.clase4base.entity.Curso;
 import com.ufide.clase4base.service.CursoService;
 
-/**
- * Controlador de cursos.
- *
- * Estado actual: los datos estan en una lista en MEMORIA. Cada vez que se
- * reinicia la app, se vuelven a los mismos cursos.
- *
- * CLASE 4: reemplazar la lista en memoria por una llamada a CursoService,
- * que internamente usa CursoRepository (JPA) para leer de MySQL.
- *
- * Pasos del refactor durante la clase:
- * 1) Inyectar el servicio:
- * import com.ufide.clase4base.service.CursoService;
- * 
- * @Autowired private CursoService service;
- *            2) En listar(): modelo.addAttribute("cursos", service.listar());
- *            3) En detalle(): service.buscarPorId(id).orElse(null);
- *            4) Borrar el bloque "datos en memoria" de mas abajo.
- */
 @Controller
 @RequestMapping("/cursos")
 public class CursoController {
